@@ -1,0 +1,90 @@
+{
+  "manifest_version": 3,
+  "name": "学习通PDF下载按钮",
+  "version": "1.0",
+  "description": "在学习通页面右下角显示 PDF 下载面板，并调用 Chrome 下载真实 PDF 链接。",
+  "permissions": [
+    "downloads",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://chaoxing.com/*",
+    "*://*.chaoxing.com/*",
+    "*://cldisk.com/*",
+    "*://*.cldisk.com/*",
+    "*://ananas.chaoxing.com/*",
+    "*://*.ananas.chaoxing.com/*",
+    "*://ananas.com/*",
+    "*://*.ananas.com/*",
+    "*://xueyinonline.com/*",
+    "*://*.xueyinonline.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://chaoxing.com/*",
+        "*://*.chaoxing.com/*",
+        "*://cldisk.com/*",
+        "*://*.cldisk.com/*",
+        "*://ananas.chaoxing.com/*",
+        "*://*.ananas.chaoxing.com/*",
+        "*://ananas.com/*",
+        "*://*.ananas.com/*",
+        "*://xueyinonline.com/*",
+        "*://*.xueyinonline.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "*://chaoxing.com/*",
+        "*://*.chaoxing.com/*",
+        "*://cldisk.com/*",
+        "*://*.cldisk.com/*",
+        "*://ananas.chaoxing.com/*",
+        "*://*.ananas.chaoxing.com/*",
+        "*://ananas.com/*",
+        "*://*.ananas.com/*",
+        "*://xueyinonline.com/*",
+        "*://*.xueyinonline.com/*"
+      ],
+      "js": [
+        "page-bridge.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "page-bridge.js"
+      ],
+      "matches": [
+        "*://chaoxing.com/*",
+        "*://*.chaoxing.com/*",
+        "*://cldisk.com/*",
+        "*://*.cldisk.com/*",
+        "*://ananas.chaoxing.com/*",
+        "*://*.ananas.chaoxing.com/*",
+        "*://ananas.com/*",
+        "*://*.ananas.com/*",
+        "*://xueyinonline.com/*",
+        "*://*.xueyinonline.com/*"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

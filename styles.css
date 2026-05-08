@@ -1,0 +1,228 @@
+.cxpdl-panel-button,
+.cxpdl-panel-download-all,
+.cxpdl-panel-close {
+  font: 12px/1.2 Arial, "Microsoft YaHei", sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+.cxpdl-panel-button:hover {
+  background: #0958d9 !important;
+  border-color: #0958d9 !important;
+}
+
+.cxpdl-panel-button:disabled {
+  cursor: wait !important;
+  opacity: 0.7 !important;
+}
+
+.cxpdl-inline-button,
+[data-cxpdl-id]:not(.cxpdl-panel-button),
+[title^="下载："]:not(.cxpdl-panel-button) {
+  display: none !important;
+}
+
+.cxpdl-panel {
+  position: fixed !important;
+  right: 18px !important;
+  bottom: 18px !important;
+  z-index: 2147483647 !important;
+  width: var(--cxpdl-panel-width, 280px) !important;
+  height: var(--cxpdl-panel-height, 360px) !important;
+  min-width: 260px !important;
+  min-height: 170px !important;
+  max-width: calc(100vw - 36px) !important;
+  max-height: calc(100vh - 36px) !important;
+  overflow: hidden !important;
+  resize: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16) !important;
+  color: #1f2329 !important;
+  font: 13px/1.4 Arial, "Microsoft YaHei", sans-serif !important;
+  user-select: none !important;
+}
+
+.cxpdl-panel-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: 38px !important;
+  padding: 0 10px 0 12px !important;
+  border-bottom: 1px solid #eee !important;
+  background: #f7f8fa !important;
+  font-weight: 600 !important;
+  flex: 0 0 auto !important;
+  gap: 8px !important;
+  cursor: move !important;
+  touch-action: none !important;
+}
+
+.cxpdl-panel-title {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.cxpdl-panel-actions {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  flex: 0 0 auto !important;
+}
+
+.cxpdl-panel-download-all {
+  height: 24px !important;
+  padding: 0 8px !important;
+  border: 1px solid #1677ff !important;
+  border-radius: 4px !important;
+  background: #1677ff !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+}
+
+.cxpdl-panel-download-all:hover {
+  background: #0958d9 !important;
+  border-color: #0958d9 !important;
+}
+
+.cxpdl-panel-download-all:disabled {
+  cursor: wait !important;
+  opacity: 0.7 !important;
+}
+
+.cxpdl-panel-close {
+  width: 24px !important;
+  height: 24px !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  background: transparent !important;
+  color: #666 !important;
+  cursor: pointer !important;
+  font-size: 18px !important;
+}
+
+.cxpdl-panel-close:hover {
+  background: #e8e8e8 !important;
+}
+
+.cxpdl-panel-body {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow: auto !important;
+  padding: 8px !important;
+}
+
+.cxpdl-panel-collapsed {
+  height: var(--cxpdl-panel-collapsed-height, 38px) !important;
+  min-height: 38px !important;
+  resize: none !important;
+}
+
+.cxpdl-panel-collapsed .cxpdl-panel-header {
+  border-bottom: 0 !important;
+}
+
+.cxpdl-panel-collapsed .cxpdl-panel-body {
+  display: none !important;
+}
+
+.cxpdl-panel-item {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 8px !important;
+  align-items: center !important;
+  padding: 6px 4px !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.cxpdl-panel-item:last-child {
+  border-bottom: 0 !important;
+}
+
+.cxpdl-panel-name {
+  display: block !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.cxpdl-panel-empty {
+  padding: 18px 10px !important;
+  color: #6b7280 !important;
+  font: 13px/1.5 Arial, "Microsoft YaHei", sans-serif !important;
+  text-align: center !important;
+}
+
+.cxpdl-panel-button {
+  height: 26px !important;
+  padding: 0 8px !important;
+  border: 1px solid #1677ff !important;
+  border-radius: 4px !important;
+  background: #1677ff !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+}
+
+.cxpdl-panel-resize {
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 18px !important;
+  height: 18px !important;
+  cursor: nwse-resize !important;
+  touch-action: none !important;
+}
+
+.cxpdl-panel-resize::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 4px !important;
+  bottom: 4px !important;
+  width: 9px !important;
+  height: 9px !important;
+  border-right: 2px solid #8c8c8c !important;
+  border-bottom: 2px solid #8c8c8c !important;
+}
+
+.cxpdl-panel-moving,
+.cxpdl-panel-resizing {
+  transition: none !important;
+}
+
+.cxpdl-panel-collapsed .cxpdl-panel-resize {
+  display: none !important;
+}
+
+.cxpdl-toast {
+  position: fixed !important;
+  left: 50% !important;
+  top: 24px !important;
+  z-index: 2147483647 !important;
+  transform: translateX(-50%) translateY(-12px) !important;
+  min-width: 160px !important;
+  max-width: 420px !important;
+  padding: 9px 14px !important;
+  border-radius: 6px !important;
+  background: rgba(0, 0, 0, 0.82) !important;
+  color: #fff !important;
+  font: 13px/1.4 Arial, "Microsoft YaHei", sans-serif !important;
+  text-align: center !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 160ms ease, transform 160ms ease !important;
+}
+
+.cxpdl-toast-visible {
+  opacity: 1 !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+.cxpdl-toast-error {
+  background: rgba(196, 29, 35, 0.92) !important;
+}
