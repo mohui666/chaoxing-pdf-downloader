@@ -11,19 +11,9 @@
 1. 打开 Chrome，进入 `chrome://extensions/`。
 2. 打开右上角“开发者模式”。
 3. 点击“加载已解压的扩展程序”。
-4. 选择这个目录：
-
-   `C:\Users\mohui666\Documents\New project\chaoxing-pdf-download-button`
 
 ## 使用
 
 进入学习通课程页面或 PDF 预览页面后，正常打开课程资料。页面加载到 PDF 文档接口后，右下角“学习通PDF”面板会显示可下载文件。点击单个“下载PDF”或“全部下载”后，文件会下载到 Chrome 默认下载目录，下载文件名与接口中的 `filename` 字段一致。
 
 右下角“学习通PDF”面板会列出当前发现的 PDF。点击“全部下载”可以顺序下载列表里的所有 PDF；拖动面板标题栏可以移动窗口，拖动右下角斜线手柄可以调节大小，位置和尺寸会自动记住。
-
-## 说明
-
-- 只使用学习通文件记录里的 `pdf` 字段下载，不使用 `download`、`http` 或 `pdfUrl` 字段。
-- 下载链接会规范成 `https://s3.ananas.chaoxing.com/.../pdf/<objectid>.pdf` 这类静态 PDF 地址。
-- 下载前会先拉取文件并检查响应确实是 PDF，避免保存成 `.htm` 或 `.json`。
-- 插件只在 `chaoxing.com`、`cldisk.com`、`ananas`、`xueyinonline.com` 相关页面运行。
